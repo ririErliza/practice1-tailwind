@@ -1,0 +1,48 @@
+--------- check the version of node-----------
+
+$ node -v
+
+--------- INSTALLATION-----------
+1. Create Tailwind config file (needed for the project)
+
+npx tailwindcss init
+
+2. Create folders
+build
+src
+
+3. create index.html inside build folders
+
+4. at tailwind.config.js
+type this inside content
+content: ['./build/*.html'],
+
+5. cretae input.css inside src folder
+
+and type these inside input.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+6. Create folder css inside build folder and style.css file
+
+npx tailwindcss -i ./src/input.css -o ./build/css/style.css
+
+7. create a div at index.html
+add tailwind classes etc
+
+8. add watch flag
+so it will watch every changes we made
+
+(not putting --watch, every changes we made wont be show at live server)
+npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch
+
+
+
+-----Extra----
+VS Code extenstion installed:
+
+Tailwind CSS IntelliSense --> showing tailwind classes as we type a class
+
+Inline fold --> making all typed classes neat
